@@ -1,6 +1,3 @@
-/* =========================
-   RESET
-========================= */
 
 * {
   margin: 0;
@@ -19,10 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-   FUNDO
-========================= */
-
 body::before {
   content: "";
   position: fixed;
@@ -40,10 +33,6 @@ body::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
   z-index: -1;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .header {
   min-height: 100vh;
@@ -82,10 +71,6 @@ body::after {
   color: #b87dff;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero {
   flex: 1;
 
@@ -104,17 +89,11 @@ body::after {
 
 .hero-badge {
   display: inline-block;
-
   padding: 10px 20px;
-
   border-radius: 50px;
-
   background: rgba(125, 60, 255, 0.15);
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(10px);
-
   margin-bottom: 20px;
 }
 
@@ -126,7 +105,6 @@ body::after {
 
 .hero h1 {
   background: linear-gradient(90deg, #ffffff, #c89cff);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -139,28 +117,18 @@ body::after {
 
 .hero-button {
   display: inline-block;
-
   padding: 15px 35px;
-
   text-decoration: none;
   color: white;
-
   border-radius: 50px;
-
   background: linear-gradient(90deg, #7d3cff, #b87dff);
-
   box-shadow: 0 0 20px #7d3cff;
-
   transition: 0.4s;
 }
 
 .hero-button:hover {
   transform: translateY(-5px);
 }
-
-/* =========================
-   TITULOS
-========================= */
 
 .section-title {
   text-align: center;
@@ -178,10 +146,6 @@ body::after {
   font-size: 3rem;
 }
 
-/* =========================
-   TIMELINE
-========================= */
-
 .timeline-section {
   padding: 120px 10%;
 }
@@ -197,16 +161,11 @@ body::after {
   position: absolute;
   left: 50%;
   top: 0;
-
   transform: translateX(-50%);
-
   width: 6px;
   height: 100%;
-
   border-radius: 20px;
-
   background: linear-gradient(#7d3cff, #b87dff);
-
   box-shadow:
     0 0 20px #7d3cff,
     0 0 40px #7d3cff;
@@ -216,7 +175,6 @@ body::after {
   width: 50%;
   position: relative;
   margin-bottom: 70px;
-
   animation: slideIn 0.8s ease;
 }
 
@@ -233,48 +191,35 @@ body::after {
 .timeline-item::before {
   content: "";
   position: absolute;
-
   width: 22px;
   height: 22px;
-
   background: #b87dff;
-
   border-radius: 50%;
-
   top: 35px;
-
   box-shadow:
     0 0 15px #b87dff,
     0 0 30px #b87dff;
-
   animation: pulse 2s infinite;
 }
 
 .timeline-item.left::before {
   right: -11px;
 }
-
 .timeline-item.right::before {
   left: -11px;
 }
 
 .timeline-card {
   background: rgba(255, 255, 255, 0.05);
-
   border: 1px solid rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(15px);
-
   border-radius: 25px;
-
   padding: 30px;
-
   transition: 0.4s;
 }
 
 .timeline-card:hover {
   transform: translateY(-10px);
-
   box-shadow:
     0 0 20px #7d3cff,
     0 0 40px #7d3cff;
@@ -287,13 +232,9 @@ body::after {
 
 .timeline-date {
   display: inline-block;
-
   padding: 8px 16px;
-
   border-radius: 40px;
-
   background: #7d3cff;
-
   margin-bottom: 15px;
 }
 
@@ -305,10 +246,6 @@ body::after {
   color: #d0d0d0;
   line-height: 1.6;
 }
-
-/* =========================
-   EVOLUÇÃO
-========================= */
 
 .evolucao {
   padding: 120px 10%;
@@ -322,13 +259,9 @@ body::after {
 
 .evolucao-card {
   background: rgba(255, 255, 255, 0.05);
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   backdrop-filter: blur(15px);
-
   border-radius: 25px;
-
   padding: 35px;
 }
 
@@ -342,10 +275,6 @@ body::after {
   color: #d5d5d5;
 }
 
-/* =========================
-   SKILLS
-========================= */
-
 .skills {
   padding: 120px 10%;
 }
@@ -358,17 +287,11 @@ body::after {
 
 .skill-card {
   background: rgba(255, 255, 255, 0.05);
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   border-radius: 20px;
-
   padding: 35px;
-
   text-align: center;
-
   font-weight: 600;
-
   transition: 0.3s;
 }
 
@@ -378,15 +301,9 @@ body::after {
   box-shadow: 0 0 25px #7d3cff;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 footer {
   padding: 60px 20px;
-
   text-align: center;
-
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -408,10 +325,6 @@ footer {
   text-decoration: none;
   margin: 0 15px;
 }
-
-/* =========================
-   ANIMAÇÕES
-========================= */
 
 @keyframes fadeIn {
   from {
@@ -448,10 +361,6 @@ footer {
     transform: scale(1);
   }
 }
-
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 1023px) {
   .hero h1 {
@@ -508,37 +417,24 @@ footer {
 
 .sb {
   display: inline-block;
-
   margin-top: 20px;
-
   padding-bottom: 4px;
-
   color: #d9c2ff;
-
   text-decoration: none;
-
   font-weight: 600;
-
   position: relative;
-
   transition: 0.3s;
 }
 
 .sb::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   width: 0;
   height: 2px;
-
   background: linear-gradient(90deg, #7d3cff, #c89cff);
-
   transition: 0.3s;
-
   box-shadow: 0 0 10px #7d3cff;
 }
 
@@ -552,25 +448,16 @@ footer {
 
 .navbar {
   position: fixed;
-
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 90%;
   max-width: 1200px;
-
   padding: 18px 30px;
-
   background: rgba(15, 10, 30, 0.55);
-
   backdrop-filter: blur(20px);
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   border-radius: 20px;
-
   z-index: 9999;
-
   box-shadow: 0 0 30px rgba(125, 60, 255, 0.15);
 }
