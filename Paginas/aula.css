@@ -1,0 +1,273 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #05010f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   FUNDO
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top, rgba(125, 60, 255, 0.2), transparent 40%),
+    radial-gradient(circle at bottom, rgba(184, 125, 255, 0.1), transparent 40%);
+
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+
+  z-index: -1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.pagina-aula {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-aula {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  background: rgba(125, 60, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 20px;
+}
+
+.hero-aula h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+
+  background: linear-gradient(90deg, #ffffff, #c89cff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-aula p {
+  color: #cfcfcf;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.bloco {
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 25px;
+
+  padding: 35px;
+
+  margin-bottom: 40px;
+
+  transition: 0.4s;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 15px rgba(125, 60, 255, 0.25),
+    0 0 30px rgba(125, 60, 255, 0.15);
+}
+
+.bloco h2 {
+  color: #c89cff;
+  margin-bottom: 20px;
+}
+
+.bloco p {
+  color: #d5d5d5;
+  line-height: 1.9;
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 250px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  transition: 0.4s;
+}
+
+.galeria img:hover {
+  transform: scale(1.04);
+
+  box-shadow: 0 0 20px rgba(125, 60, 255, 0.35);
+}
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 0 20px rgba(125, 60, 255, 0.3);
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.voltar {
+  display: inline-block;
+
+  padding: 15px 30px;
+
+  text-decoration: none;
+
+  color: white;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #7d3cff, #b87dff);
+
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 20px #7d3cff;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+  .hero-aula h1 {
+    font-size: 2.4rem;
+  }
+
+  .pagina-aula {
+    width: 95%;
+  }
+}
+
+.container-voltar {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 15px 30px;
+
+  text-decoration: none;
+  color: white;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #7d3cff, #b87dff);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 0 15px rgba(125, 60, 255, 0.5),
+    0 0 30px rgba(125, 60, 255, 0.2);
+}
+
+.voltar:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 20px #7d3cff,
+    0 0 40px #7d3cff,
+    0 0 60px rgba(125, 60, 255, 0.4);
+}
